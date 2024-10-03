@@ -1,6 +1,7 @@
 import { latLng } from 'leaflet';
 import { Identify } from './Identify';
-import { responseToFeatureCollection,
+import {
+  responseToFeatureCollection,
   boundsToExtent,
   _setGeometry
 } from '../Util';

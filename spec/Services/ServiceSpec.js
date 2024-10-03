@@ -84,8 +84,9 @@ describe('L.esri.Service', function () {
   });
 
   it('should fire a requestend event', function (done) {
-    server.respondWith('GET', 'http://services.arcgis.com/mock/arcgis/rest/services/MockService/route?foo=bar&f=json', JSON.stringify({ foo: 'bar'
-    }));
+    server.respondWith('GET', 'http://services.arcgis.com/mock/arcgis/rest/services/MockService/route?foo=bar&f=json',
+      JSON.stringify({ foo: 'bar' }
+      ));
 
     service.on('requestend', function (e) {
       expect(e.type).to.equal('requestend');
