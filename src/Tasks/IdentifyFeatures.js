@@ -68,7 +68,7 @@ export var IdentifyFeatures = Identify.extend({
         }
         callback.call(context, undefined, featureCollection, response);
       }
-    });
+    }, context);
   },
 
   _setGeometryParams: function (geometry) {
