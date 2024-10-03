@@ -114,8 +114,7 @@ export var DynamicMapLayer = RasterLayer.extend({
 
     identifyRequest.run(callback, {
       options: {
-        withCredentials: !!this.options.withCredentials,
-        foo: 'bar'
+        withCredentials: !!this.options.withCredentials
       }
     });
 
