@@ -266,7 +266,7 @@ export var FeatureManager = FeatureGrid.extend({
       query = query.offset(offset);
     }
 
-    query.params['resultType'] = 'tile';
+    query.params.resultType = 'tile';
 
     if (this.options.requestParams) {
       Util.extend(query.params, this.options.requestParams);

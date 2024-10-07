@@ -1,6 +1,7 @@
 import { latLng } from 'leaflet';
 import { Identify } from './Identify';
-import { responseToFeatureCollection,
+import {
+  responseToFeatureCollection,
   boundsToExtent,
   _setGeometry
 } from '../Util';
@@ -67,7 +68,7 @@ export var IdentifyFeatures = Identify.extend({
         }
         callback.call(context, undefined, featureCollection, response);
       }
-    });
+    }, context);
   },
 
   _setGeometryParams: function (geometry) {

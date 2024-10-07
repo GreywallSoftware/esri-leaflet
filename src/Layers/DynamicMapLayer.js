@@ -112,7 +112,11 @@ export var DynamicMapLayer = RasterLayer.extend({
       }
     }
 
-    identifyRequest.run(callback);
+    identifyRequest.run(callback, {
+      options: {
+        withCredentials: !!this.options.withCredentials
+      }
+    });
 
     // set the flags to show the popup
     this._shouldRenderPopup = true;
