@@ -104,7 +104,7 @@ export var DynamicMapLayer = RasterLayer.extend({
     }
 
     // if present, pass layer ids and sql filters through to the identify task
-    if (this.options.layerDefs && typeof this.options.layerDefs !== 'string' && !identifyRequest.params.layerDefs) {
+    if (this.options.layerDefs && typeof this.options.layerDefs !== 'string') {
       for (var id in this.options.layerDefs) {
         if (Object.prototype.hasOwnProperty.call(this.options.layerDefs, id)) {
           identifyRequest.layerDef(id, this.options.layerDefs[id]);
